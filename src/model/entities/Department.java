@@ -52,7 +52,7 @@ public class Department implements Serializable{
 	}
 	
 	public String toString() {
-		return "Department = " + "Name - " + name + ", Id - " + id;
+		return "Department = " + "Name: " + name + ", Id: " + id;
 	}
 
 }

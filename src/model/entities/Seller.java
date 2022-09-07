@@ -67,6 +67,10 @@ public class Seller implements Serializable{
 	public void setBaseSalary(double baseSalary) {
 		this.baseSalary = baseSalary;
 	}
+	
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
 
 	@Override
 	public int hashCode() {
@@ -89,7 +93,7 @@ public class Seller implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Seller = id - " + id + ", name - " + name + ", email - " + email + ", birthDate - " + birthDate + ", baseSalary - "
+		return "Seller = id: " + id + ", name: " + name + ", email: " + email + ", birthDate: " + birthDate + ", baseSalary: "
 				+ String.format("%.2f%n", baseSalary) + department;
 	}
 }

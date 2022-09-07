@@ -1,24 +1,24 @@
 package application;
 
-import java.util.Date;
+import java.util.Scanner;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
-import model.entities.Department;
 import model.entities.Seller;
 
 public class Program {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		
-		
-		Department obj = new Department(1, "Books");
-		System.out.println(obj);
-		
-		Seller seller = new Seller(34, "Lucas Barros", "Lucas@Gamil.com",new Date(), 3500.00, obj);
-		System.out.println(seller);
+		System.out.print("Entre com o ID do vendedor: ");
+		int id = sc.nextInt();
 		
 		SellerDao sellerdao = DaoFactory.createSellerDao();
+		
+		Seller seller = sellerdao.findById(id);
+		
+		System.out.println(seller);
 	}
 
 }
